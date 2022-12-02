@@ -75,19 +75,6 @@ public class CarRacingGameTest {
         assertThat(cars.findWinners().size()).isBetween(0, 4);
     }
 
-    @Test
-    void getRaceResults() {
-        String input = "pobi,crong,honux";
-        Cars cars = new Cars(input.split(","));
-
-        int attempt = 5;
-        RaceResults results = cars.race(5);
-
-        assertThat(results.getRaceCount()).isEqualTo(attempt);
-        List<String> winnerNames = results.getWinners();
-        RaceResult result = results.getResultInfoWhen(1);
-    }
-
     //경주할 자동차 이름을 입력하세요(이름은 쉼표(,)를 기준으로 구분).
     //pobi,crong,honux
     //시도할 회수는 몇회인가요?

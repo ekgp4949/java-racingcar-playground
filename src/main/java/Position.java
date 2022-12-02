@@ -1,5 +1,5 @@
 public class Position {
-    private final int MIN_RACE_VALUE = 4;
+    private static final int MIN_RACE_VALUE = 4;
     private int position;
 
     public int getPosition() {
@@ -7,7 +7,7 @@ public class Position {
     }
 
     public void go(int randomValue) {
-        if(randomValue >= 4) {
+        if(randomValue >= MIN_RACE_VALUE) {
             position++;
         }
     }
